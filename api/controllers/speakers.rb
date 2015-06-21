@@ -1,5 +1,8 @@
+require_relative '../helpers/resources_helper'
+
 Confy::API.controllers :speakers do
   include JsonHelper
+  include ResourcesHelper
 
   get :index do
     render_json :'speakers/index.json',

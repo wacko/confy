@@ -1,4 +1,6 @@
 json.(speaker, :id, :name, :twitter)
+json.photo_url speaker_image_url(speaker.twitter)
+
 json.talks speaker.talks do |talk|
   json.(talk, :id, :title, :description, :video_url, :conference_id, :slug)
 
